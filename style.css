@@ -1,87 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-family: "Poppins", sans-serif;
 }
-
+::selection {
+    color: #ffff;
+    background: rgb(142, 73, 232);
+}
 body {
     width: 100%;
     height: 100vh;
+    margin: auto;
+    /* overflow: hidden; */
     padding: 10px;
-    background-color: linear-gradient(to bottom #68eacc 0%, #497be8 100%);
+    background: linear-gradient(to bottom, #68eacc 0%, #497be8 100%);
 }
-
 .box {
+    
     background: #fff;
     max-width: 400px;
+    min-width: 200px;
     width: 100%;
     margin: 120px auto;
     padding: 25px;
     border-radius: 5px;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
 }
-
 .box header {
     font-size: 30px;
     font-weight: 600;
 }
-
-.box .inputBox {
+.box .inputField {
     margin: 20px 0;
     width: 100%;
     display: flex;
     height: 45px;
 }
-
-.inputBox input {
+.inputField input {
     width: 85%;
     height: 100%;
     outline: none;
     border-radius: 3px;
     border: 1px solid #ccc;
-    font-size: 17px;
+    font-size: 20px;
     padding-left: 15px;
     transition: all 0.3s ease;
 }
-
-.inputBox input:focus {
-    border-color: #361463;
+.inputField input:focus {
+    border-color: #8e49e8;
 }
-
-.inputBox button {
+.inputField button {
     width: 50px;
     height: 100%;
     border: none;
     color: #fff;
     margin-left: 5px;
-    font-size: 21px;
+    font-size: 30px;
     outline: none;
-    background: #361463;
+    background: #340f66;
     cursor: pointer;
     border-radius: 3px;
     opacity: 0.6;
     pointer-events: none;
     transition: all 0.3s ease;
 }
-
-.inputBox button:hover,
+.inputField button:hover,
 .footer button:hover {
     background: #721ce3;
 }
-
-.inputBox button.active {
+.inputField button.active {
     opacity: 1;
     pointer-events: auto;
 }
-
 .box .todoList {
-    max-height: 300px;
-    /* max-width: 600px; */
+    max-height: 250px;
     overflow-y: auto;
 }
-
 .todoList li {
     position: relative;
     list-style: none;
@@ -108,16 +104,12 @@ body {
 .todoList li:hover .icon {
     right: 0px;
 }
-
-
-.box .footer{
-    
+.box .footer {
     display: flex;
     width: 100%;
     margin-top: 20px;
     align-items: center;
     justify-content: space-between;
-
 }
 .footer button {
     padding: 6px 10px;
@@ -126,16 +118,15 @@ body {
     outline: none;
     color: #fff;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 16px;
     margin-left: 5px;
-    background: #361463;
+    background: #8e49e8;
     cursor: pointer;
     user-select: none;
     opacity: 0.6;
     pointer-events: none;
     transition: all 0.3s ease;
 }
-
 .footer button.active {
     opacity: 1;
     pointer-events: auto;
