@@ -45,7 +45,7 @@ function showTasks() {
         deleteAllBtn.classList.remove("active"); //unactive the delete button
     }
     let newLiTag = "";
-    listArray.forEach((element, index) => {
+    listArray.reverse().forEach((element, index) => {
         newLiTag += `<li>${element}<span class="icon" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`;
     });
     todoList.innerHTML = newLiTag; //adding new li tag inside ul tag
@@ -56,7 +56,8 @@ function showTasks() {
 function deleteTask(index) {
     let getLocalStorageData = localStorage.getItem("New Todo");
     listArray = JSON.parse(getLocalStorageData);
-    listArray.splice(index, 1); //delete or remove the li
+    let correctIndex = listArray.length - 1 - index; // calculate the correct index
+    listArray.splice(correctIndex, 1); //delete or remove the li
     localStorage.setItem("New Todo", JSON.stringify(listArray));
     showTasks(); //call the showTasks function
 }
