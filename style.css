@@ -18,7 +18,9 @@ body {
     background: linear-gradient(to bottom, #68eacc 0%, #497be8 100%);
 }
 .box {
+    position: relative; /* nipon add korse */
     
+    min-height: 400px;
     background: #fff;
     max-width: 400px;
     min-width: 200px;
@@ -111,13 +113,17 @@ body {
     margin-top: 20px;
     align-items: center;
     justify-content: space-between;
+
+    /* nipon */
+    position: sticky;
+    bottom: 0px;
 }
 .footer button {
     padding: 6px 10px;
     border-radius: 3px;
     border: none;
     outline: none;
-    color: #fff;
+    color: #c46060;
     font-weight: 400;
     font-size: 16px;
     margin-left: 5px;
@@ -131,4 +137,34 @@ body {
 .footer button.active {
     opacity: 1;
     pointer-events: auto;
+}
+
+
+
+/* nipon add korse */
+
+.confirm{
+    /* width: 100%; */
+    background-color: #e74c3c;
+    position: absolute;
+    height:130px;
+    top: 45%;
+    padding: 15px;
+    border-radius: 15px;
+
+    /* nipon */
+    visibility: hidden;
+}
+
+.confirm_Btn{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+
+}
+
+.confirm_Btn button{
+    padding: 10px 20px;
+    border-radius: 5px;
 }
